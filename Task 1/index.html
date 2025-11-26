@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>My Cute Animal Gallery 🐾</h1>
+
+    <div class="gallery">
+        <img src="image/cat.png" alt="Cat" onclick="openLightbox(this)">
+        <img src="image/dog.png" alt="Dog" onclick="openLightbox(this)">
+        <img src="image/panda.png" alt="Panda" onclick="openLightbox(this)">
+        <img src="image/rabbit.png" alt="Rabbit" onclick="openLightbox(this)">
+        <img src="image/fox.png" alt="Fox" onclick="openLightbox(this)">
+    </div>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
