@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #ffe7f7, #d9e8ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.music-player-container {
+  display: flex;
+  gap: 20px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.playlist-container {
+  width: 35%;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.playlist-container h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+#playlist button {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background: #ff66b3;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+#playlist button:hover {
+  transform: scale(1.05);
+  background: #ff3399;
+}
+
+.now-playing-container {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  background: rgba(255,255,255,0.85);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  align-items: center;
+}
+
+.cover-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.cover-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.cover-container img.active {
+  opacity: 1;
+}
+
+.song-info {
+  flex: 1;
+}
+
+.song-info h2, .song-info h3 {
+  margin: 5px 0;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.controls button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ff66b3;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.controls button:hover {
+  background: #ff3399;
+  transform: scale(1.05);
+}
+
+.slider-container {
+  margin: 10px 0;
+}
+
+.slider-container label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input[type="range"], input[type="file"] {
+  width: 100%;
+  margin: 5px 0;
+}
