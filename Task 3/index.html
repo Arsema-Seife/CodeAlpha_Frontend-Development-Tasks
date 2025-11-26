@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="light-mode">
+
+    <!-- Header -->
+    <header>
+        <h1>Hi 🌸</h1>
+        <nav>
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About Me</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+
+            <!-- Dark mode toggle -->
+            <label class="toggle-switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider round"></span>
+            </label>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="hero-left">
+                <h1 class="typing-text">Arsema Seife</h1>
+                <p class="intro">
+                    Beginner Software Engineering student 👩‍💻<br>
+                    C++ enthusiast • Frontend learner • Creative UI lover 🌸<br>
+                    Addis Ababa, Ethiopia 🇪🇹
+                </p>
+                <div class="social-icons">
+                    <a href="https://github.com/Arsema-Seife" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/arsema-seife-b0a21338b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:arsemaseife731@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <img src="persona.jpg" alt="My Persona Character" class="fade-in-image">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="about-card" 
+                     onclick="openAboutLightbox('💻 Coding Lover', 'I love writing code in C++ and building interactive projects that solve real problems.')">
+                    <h3>💻 Coding Lover</h3>
+                    <p>Click to know more!</p>
+                </div>
+                <div class="about-card" 
+                     onclick="openAboutLightbox('🎬 Drama & Anime', 'I enjoy watching C-dramas, K-dramas, and anime movies. Storytelling inspires my creativity.')">
+                    <h3>🎬 Drama & Anime</h3>
+                    <p>Click to know more!</p>
+                </div>
+                <div class="about-card" 
+                     onclick="openAboutLightbox('🧩 Problem Solver', 'Puzzles, challenges, and hackathons excite me. I enjoy learning through practical coding tasks.')">
+                    <h3>🧩 Problem Solver</h3>
+                    <p>Click to know more!</p>
+                </div>
+                <div class="about-card" 
+                     onclick="openAboutLightbox('🌸 Fun & Creative', 'I like combining pastel designs, interactive UI, and creative ideas into my projects.')">
+                    <h3>🌸 Fun & Creative</h3>
+                    <p>Click to know more!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="gallery">
+                <div class="project-card" 
+                     onclick="openProjectLightbox('CGPA Calculator 🖩', 'Calculate GPA and CGPA easily with a modern interface.', 'https://github.com/Arsema-Seife/CodeAlpha-C--Plus_plus-Tasks/tree/main/Task%201')">
+                    <h3>CGPA Calculator 🖩</h3>
+                    <p>Calculate GPA and CGPA easily with a modern interface.</p>
+                </div>
+                <div class="project-card" 
+                     onclick="openProjectLightbox('Login System 🔐', 'Secure file-based login system using C++.', 'https://github.com/Arsema-Seife/CodeAlpha-C--Plus_plus-Tasks/tree/main/Task%202')">
+                    <h3>Login System 🔐</h3>
+                    <p>Secure file-based login system using C++.</p>
+                </div>
+                <div class="project-card" 
+                     onclick="openProjectLightbox('Banking System 🏦', 'Simple banking simulation in C++ with accounts and transactions.', 'https://github.com/Arsema-Seife/CodeAlpha-C--Plus_plus-Tasks/tree/main/Task%204')">
+                    <h3>Banking System 🏦</h3>
+                    <p>Simple banking simulation in C++ with accounts and transactions.</p>
+                </div>
+                <div class="project-card" 
+                     onclick="openProjectLightbox('Sudoku Solver 🧩', 'Backtracking-based puzzle solver in C++.', 'https://github.com/Arsema-Seife/CodeAlpha-C--Plus_plus-Tasks/tree/main/Task%203')">
+                    <h3>Sudoku Solver 🧩</h3>
+                    <p>Backtracking-based puzzle solver in C++.</p>
+                </div>
+                <div class="project-card" 
+                     onclick="openProjectLightbox('Image Gallery 🐾', 'Interactive gallery with lightbox, pastel-themed UI.', 'https://github.com/Arsema-Seife/CodeAlpha_Frontend-Development-Tasks/tree/main/Task%201')">
+                    <h3>Image Gallery 🐾</h3>
+                    <p>Interactive gallery with lightbox, pastel-themed UI.</p>
+                </div>
+                <div class="project-card" 
+                     onclick="openProjectLightbox('Calculator 🖩', 'Modern pastel-themed calculator with smooth animations.', 'https://github.com/Arsema-Seife/CodeAlpha_Frontend-Development-Tasks/tree/main/Task%202')">
+                    <h3>Calculator 🖩</h3>
+                    <p>Modern pastel-themed calculator with smooth animations.</p>
+                </div>
+                <div class="project-card" 
+                     onclick="openProjectLightbox('EduChain 🏆', 'Blockchain-based education project, recently won a hackathon!', 'https://github.com/Arsema-Seife/EduChain')">
+                    <h3>EduChain 🏆</h3>
+                    <p>Blockchain-based education project, recently won a hackathon!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:arsemaseife731@gmail.com">Click link here</a></p>
+            <p>GitHub: <a href="https://github.com/Arsema-Seife">Click link here</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/arsema-seife-b0a21338b/">Click link here</a></p>
+        </section>
+    </main>
+
+    <!-- Lightbox for Projects -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <div id="lightbox-content">
+            <h3 id="lightbox-title"></h3>
+            <p id="lightbox-desc"></p>
+            <a id="lightbox-github" href="#" target="_blank">View on GitHub</a>
+        </div>
+    </div>
+
+    <!-- Lightbox for About Me -->
+    <div id="about-lightbox" onclick="closeAboutLightbox()">
+        <div id="about-lightbox-content">
+            <h3 id="about-lightbox-title"></h3>
+            <p id="about-lightbox-desc"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
